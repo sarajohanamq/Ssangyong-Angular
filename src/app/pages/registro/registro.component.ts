@@ -1,3 +1,5 @@
+import { CondicionesComponent } from './condiciones/condiciones.component';
+import { DialogComponent } from './dialog/dialog.component';
 import { Cliente } from './../../_model/Cliente';
 import { Locacion } from './../../_model/Locacion';
 import { Ciudades } from './../../_model/Ciudades';
@@ -6,11 +8,12 @@ import { RegistroService } from './../../_service/registro.service';
 import { Component, OnInit } from '@angular/core';
 import { ValidacionesPersonalizadas } from 'src/app/_model/ValidacionesPersonalizadas';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Routes, Router } from '@angular/router';
+import { Routes, Router, RouterEvent } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Modelos } from 'src/app/_model/Modelos';
 import { Portafolio } from 'src/app/_model/Portafolio';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -18,7 +21,7 @@ import { Portafolio } from 'src/app/_model/Portafolio';
 })
 export class RegistroComponent implements OnInit {
   formgroup: FormGroup;
-  constructor(private _snackBar: MatSnackBar, private registroService:RegistroService) { }
+  constructor(private _snackBar: MatSnackBar, private registroService:RegistroService,public dialog: MatDialog,public Condiciones: MatDialog,private router: Router) { }
   selected = 0;
   public modelo:Portafolio[];
   public ciudadesUser: Ciudades[];
@@ -28,6 +31,7 @@ export class RegistroComponent implements OnInit {
   ciudadElegida=0;
   modeloElegido="";
   ngOnInit(): void {
+    this.abrirDialogo();
     this.formgroup = new FormGroup({
       name: new FormControl('', [Validators.required,Validators.minLength(4)]),
       tel: new FormControl('', [Validators.required,Validators.minLength(10),Validators.maxLength(15)]),
@@ -77,12 +81,13 @@ export class RegistroComponent implements OnInit {
     };
    
     this.registroService.postRegistro(this.registrar).subscribe(data => {
+      this.abrirDialogo();
       this._snackBar.open('Solicitud Enviada', 'Advertencia', {
         duration: 1000,
       });
     }, err => {
-      if (err.status == 400) {
-        this._snackBar.open('Ya realizo una solictud el dia hoy con el mismo correo', 'Advertrencia', {
+      if (err.status == 409) {
+        this._snackBar.open('Ya realizo una solicitud el dia hoy por favor espere', 'Advertencia', {
         duration: 2000,
         });
       }else{
@@ -91,5 +96,25 @@ export class RegistroComponent implements OnInit {
         });
       }
     });
+  }
+  abrirDialogo() {
+    
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '80%',
+      maxHeight:'640px'
+    });
+
+    
+
+  }
+  abrirCondiciones() {
+    
+    const dialogRef = this.Condiciones.open(CondicionesComponent, {
+      width: '80%',
+      maxHeight:'640px'
+    });
+
+
+
   }
 }

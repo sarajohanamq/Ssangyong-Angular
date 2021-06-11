@@ -7,10 +7,14 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DialogComponent } from './pages/registro/dialog/dialog.component';
+import { CondicionesComponent } from './pages/registro/condiciones/condiciones.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RegistroComponent
+    RegistroComponent,
+    DialogComponent,
+    CondicionesComponent
   ],
   imports: [
     BrowserModule,
