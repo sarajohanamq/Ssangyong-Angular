@@ -46,7 +46,7 @@ export class RegistroComponent implements OnInit {
     this.registroService.getLocacion().subscribe((data:Locacion[]) => {
       this.departamentoUser=data;
     }, err => {
-      this._snackBar.open(err, 'Advertencia', {
+      this._snackBar.open(err['name'], 'Advertencia', {
       duration: 2000,
       });
     });
@@ -58,6 +58,10 @@ export class RegistroComponent implements OnInit {
     this.registroService.getCiudad(this.selected).subscribe((data:Ciudades[]) => {
       this.ciudadesUser=data;
       
+    }, err => {
+      this._snackBar.open(err['name'], 'Advertencia', {
+      duration: 2000,
+      });
     });
   }
   }
@@ -77,9 +81,15 @@ export class RegistroComponent implements OnInit {
         duration: 1000,
       });
     }, err => {
-      this._snackBar.open(err, 'Advertencia', {
-      duration: 2000,
-      });
+      if (err.status == 400) {
+        this._snackBar.open('Ya realizo una solictud el dia hoy con el mismo correo', 'Advertrencia', {
+        duration: 2000,
+        });
+      }else{
+        this._snackBar.open(err['name'], 'Advertencia', {
+        duration: 2000,
+        });
+      }
     });
   }
 }

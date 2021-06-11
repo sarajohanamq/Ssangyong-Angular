@@ -21,12 +21,12 @@ form{
 }
 .button{
     text-align: left !important;
-    margin-left: 40px;
+    margin-left: 70px;
     margin-top: 20px;
 }
 .check-box{
     text-align: left !important;
-    margin-left: 50px;
+    margin-left: 70px;
     margin-top: 20px;
 }
 .butttonsend{
@@ -43,15 +43,15 @@ form{
     margin-right: 12px;
 }
 .select{
-   margin-left: 40px;
+   margin-left: 60px;
    margin-right: 20px;
-   width: 70%;
+   width: 60%;
 }
 .field{
     width: 100%;
 }
 mat-form-field{
-    width: 80%;
+    width: 70%;
     margin-top:20px;
 }
 .forma{
@@ -63,7 +63,7 @@ mat-form-field{
  
 }
 .select2{
-    margin-right: 32px;
+    margin-right: 42px;
 }
 .titulo{
     font-weight: bold;
