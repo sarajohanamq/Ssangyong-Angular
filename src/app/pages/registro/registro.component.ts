@@ -31,7 +31,6 @@ export class RegistroComponent implements OnInit {
   ciudadElegida=0;
   modeloElegido="";
   ngOnInit(): void {
-    this.abrirDialogo();
     this.formgroup = new FormGroup({
       name: new FormControl('', [Validators.required,Validators.minLength(4)]),
       tel: new FormControl('', [Validators.required,Validators.minLength(10),Validators.maxLength(15)]),
