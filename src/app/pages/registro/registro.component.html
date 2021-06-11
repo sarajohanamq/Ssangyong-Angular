@@ -1,0 +1,99 @@
+<div class="form">
+ 
+    <form [formGroup]="formgroup" #frmRegistro="ngForm" (ngSubmit)="enviar($event)">
+        <section>
+                <h1 class="titulo">¡ COTIZA LA TUYA !</h1>
+        </section>
+        <section class="field">
+        <mat-form-field class="forma">
+            <mat-label>Selecciona un modelo</mat-label>
+            <mat-select [(value)]="modeloElegido" >
+                <mat-option *ngFor="let modelos of modelo" value="{{modelos.subtitle}}">{{modelos.subtitle}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </section>
+        <section class="field">
+            <mat-form-field class="forma">
+             
+                <input matInput placeholder="Nombre completo" formControlName="name" class="fielduser">
+             
+                <mat-error *ngIf="formgroup.get('name').hasError('required')">
+                    Ingrese su nombre
+                </mat-error>
+                <mat-error *ngIf="formgroup.get('name').hasError('minlength')">
+                    Nombre muy corto
+                </mat-error>
+                <mat-error *ngIf="formgroup.get('name').hasError('maxlength')">
+                    Nombre muy largo
+                </mat-error>
+            </mat-form-field>
+        </section>
+        <section class="field">
+            <mat-form-field class="forma">
+            
+                    <input matInput placeholder="Email" formControlName="email" class="fielduser">
+              
+                <mat-error *ngIf="formgroup.get('email').hasError('required')">
+                    Ingrese un correo
+                </mat-error>
+                <mat-error *ngIf="formgroup.get('email').hasError('email')">
+                    Ingrese un correo valido
+                </mat-error>
+            </mat-form-field>
+        </section>
+        <section class="field">
+            <mat-form-field class="forma">
+               
+                <input matInput placeholder="Número celular" formControlName="tel" class="fielduser" type="celphone">
+            
+                <mat-error *ngIf="formgroup.get('tel').hasError('required')">
+                    Ingrese su telefono
+                </mat-error>
+                <mat-error *ngIf="formgroup.get('tel').hasError('minlength')">
+                    Telefono muy corto
+                </mat-error>
+                <mat-error *ngIf="formgroup.get('tel').hasError('maxlength')">
+                    Telefono muy largo
+                </mat-error>
+            </mat-form-field>
+        </section>
+     
+        <section class="dividir">
+            <div>
+            <mat-form-field class="select forma">
+                <mat-label>Departamento</mat-label>
+                <mat-select  formControlName="departamentoSelect"  [ngModel]="selected" (ngModelChange)="capturar($event)" >
+                    <mat-option *ngFor="let departamentos of departamentoUser" [ngValue]="departamentos.id"  value="{{departamentos.id}}">{{departamentos.departamento}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="formgroup.get('departamentoSelect').hasError('minlength')">
+                    seleccione
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="forma select2">
+                <mat-label>Ciudad</mat-label>
+                <mat-select formControlName="ciudadSelect" [(value)]="ciudadElegida" *ngIf="selected!=0">
+                    <mat-option *ngFor="let ciudadUser of ciudadesUser" value="{{ciudadUser.id}}">{{ciudadUser.ciudad}}</mat-option>
+                </mat-select>
+                <mat-select formControlName="ciudadSelect" *ngIf="selected==0">
+                    <mat-option>Selecione un departamento</mat-option>
+                </mat-select>
+                <mat-error *ngIf="formgroup.get('ciudadSelect').hasError('minlength')">
+                    seleccione
+                </mat-error>
+            </mat-form-field>
+            </div> 
+        </section>
+        <section class="check-box">
+            <mat-checkbox formControlName="check" class="example-margin">Acepto la politica de <a href="#">Tratamiento de datos personales</a></mat-checkbox>
+        </section>
+        <mat-error *ngIf="formgroup.get('check').hasError('requiredTrue')">
+            Debe aceptar los terminos y condiciones
+        </mat-error>
+        <section class="button">
+            <button mat-raised-button id="basic" type="submit" class="butttonsend" [disabled]="frmRegistro.invalid">Enviar datos</button>
+        </section>
+
+    </form>
+</div>

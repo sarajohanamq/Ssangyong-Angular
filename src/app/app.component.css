@@ -1,0 +1,145 @@
+/*
+Estilos del Banner
+*/
+
+.image-back{
+    background: transparent url('../assets/img/Banner.png') 100% 0% no-repeat padding-box;  
+    background-position-y: -101px;
+    background-size: cover;
+    min-height: 100vh;
+    max-height: 999px;
+
+    z-index: -2;
+}
+
+.page-header{
+    
+   
+    background: transparent url('../assets/img/Banner.png') 100% 0% no-repeat padding-box;
+    background-position-y: -100px;
+    background-position-x: -193px;
+    background-size: cover;
+    min-height: 100vh;
+    max-height: 999px;
+
+    z-index: -1;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+   
+  
+}
+img{
+    overflow: hidden;
+    position: relative;
+
+}
+.logo{
+    top: 19px;
+    left: 5%;
+    width: 342px;
+    height: 40px;
+}
+.caracteristicas{
+    top: 610px;
+    left: -12%;
+    width: 342px;
+    height: 61px;
+}
+@media screen and (max-width:1500px){
+    .caracteristicas{
+        top: 550px;
+    } 
+    .page-header{
+        background-position-y: -140px;
+    }
+    .image-back{
+        background-position-y: -141px;
+    }
+}
+@media screen and (max-width:1358px){
+    .logo{
+        width: 250px;
+        height: 30px;
+    }
+    .caracteristicas{
+        top: 500px;
+        left: -10%;
+    } 
+}
+@media screen and (max-height:600px){
+    .caracteristicas{
+        top: 450px !important;
+    } 
+}
+@media screen and (max-height:579px){
+    .caracteristicas{
+        background-position-y: -50px;
+    } 
+}
+@media screen and (max-width:1264px){
+    .image-back{
+        background-position-y: -51px;
+    }
+    .page-header{
+        background-position-y: -50px;
+    }
+    .caracteristicas{
+        top: 540px;
+        left: -11%;
+    } 
+}
+@media screen and (max-width:1122px){
+    .page-header{
+        background: none !important;
+    }
+    .image-back{
+        background-position-y: 0px;
+    }
+    .logo{
+       display: none;
+    }
+    .caracteristicas{
+        display: none;
+    } 
+}
+/*
+Estilos del contenedor del formulario
+*/
+.contenedor-form{
+    display: flex;
+    flex-flow: row-reverse;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.formulario{
+    height: 80%;
+    margin-top: 5%;
+    width: 60%;
+    z-index: 2;
+}
+
+
+@media screen and (max-width:1500px){
+    .formulario{
+        height: 100%;
+        margin-top: 10px;
+      
+    }
+}
+@media screen and (max-width:1122px){
+    .contenedor-form{
+        margin-top: 20px;
+        flex-flow: nowrap;
+        justify-content: center;
+        text-align: center;
+        align-items:center;
+    } 
+}
+@media screen and (max-width:750px){
+    .formulario{
+       width: 100%;
+    }
+}
