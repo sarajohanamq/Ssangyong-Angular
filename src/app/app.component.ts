@@ -1,3 +1,4 @@
+import { Routes, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ssangyong';
-  constructor() { }
+  
+  constructor(private router:Router) { }
+
 }
