@@ -86,7 +86,8 @@
             </div> 
         </section>
         <section class="check-box">
-            <mat-checkbox formControlName="check" class="example-margin">Acepto la politica de <a href="#">Tratamiento de datos personales</a></mat-checkbox>
+            <mat-checkbox formControlName="check" class="example-margin">Acepto la politica de </mat-checkbox>
+            <div class="contA"><a (click)="abrirCondiciones()">Tratamiento de datos personales</a></div>
         </section>
         <mat-error *ngIf="formgroup.get('check').hasError('requiredTrue')">
             Debe aceptar los terminos y condiciones

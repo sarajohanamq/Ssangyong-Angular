@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     z-index: 3;
+    overflow: hidden;
 }
 @media screen and (max-width:750px){
     .formulario{
@@ -25,9 +26,11 @@ form{
     margin-top: 20px;
 }
 .check-box{
+    display: flex;
     text-align: left !important;
     margin-left: 70px;
     margin-top: 20px;
+    flex-flow: row;
 }
 .butttonsend{
     background-color: black;
@@ -43,9 +46,9 @@ form{
     margin-right: 12px;
 }
 .select{
-   margin-left: 60px;
-   margin-right: 20px;
-   width: 60%;
+   margin-left: 55px;
+   margin-right: 10px;
+   width: 55%;
 }
 .field{
     width: 100%;
@@ -63,7 +66,8 @@ mat-form-field{
  
 }
 .select2{
-    margin-right: 42px;
+    margin-right: 50px;
+    width: 65%;
 }
 .titulo{
     font-weight: bold;
@@ -71,4 +75,86 @@ mat-form-field{
 }
 a{
     color: blue;
+}
+a:hover{
+    cursor: pointer;
+}
+.contA{
+    padding-top: 2px;
+    padding-left: 3px;
+}
+@media screen and (max-width:1400px){
+    .dividir{
+        margin-right: 0px;
+    }
+    .select{
+       margin-left: 85px;
+       margin-right: 0;
+       width: 50%;
+    }
+    mat-form-field{
+        width: 60%;
+    }
+
+    .select2{
+        margin-right: 90px;
+        width: 50%;
+    }
+    .check-box{
+      
+        margin-left: 112px;
+       
+    }
+    .button{
+        
+        margin-left: 110px;
+       
+    }
+    
+}
+@media screen and (max-width:524px){
+    .form{
+        width: 100%;
+        margin-left: 0% !important;
+    }
+}
+@media screen and (max-width:380px){
+    .select{
+       margin-left: 0px;
+       margin-right: 0;
+       width: 65%;
+    }
+    mat-form-field{
+        width: 65%;
+    }
+
+    .select2{
+        margin-left: 0px;
+        margin-right: 0;
+        width: 65%;
+    }
+    .dividir{
+        flex-flow: column;
+        margin-right: 0px;
+    }
+    .check-box{
+     
+       margin-left: 40px;
+       flex-flow: column;
+    }
+    .button{
+        
+        margin-left: 0;
+        text-align: center !important;
+       
+    }
+    .example-margin{
+        font-size: 15px;
+    }
+    a{
+        font-size: 12px;
+    }
+    .titulo{
+        font-size: 30px;
+    }
 }

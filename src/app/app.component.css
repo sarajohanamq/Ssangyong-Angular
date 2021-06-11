@@ -138,7 +138,7 @@ Estilos del contenedor del formulario
         align-items:center;
     } 
 }
-@media screen and (max-width:750px){
+@media screen and (max-width:945px){
     .formulario{
        width: 100%;
     }
@@ -313,4 +313,19 @@ Estilos del contenedor del formulario
     font-family: inherit;
     color: gray;
     margin-bottom: 3%;
+}
+@media screen and (max-height:570px){
+    .formulario{
+        margin-top: 0 !important;
+    }
+}
+@media screen and (max-width:1274px){
+    .contenedor-form{
+        width: 200%;
+    }
+}
+@media screen and (max-width:554px){
+    .contenedor-form{
+        overflow: hidden;
+    }
 }
