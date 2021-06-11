@@ -143,3 +143,174 @@ Estilos del contenedor del formulario
        width: 100%;
     }
 }
+
+/*
+    Estilos para las características
+*/
+
+.image-korando{
+    background-color: #f4f4f4;
+    width: 100%;
+    text-align: center;
+}
+.title-features{
+    margin-top: 5%;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    font-family: inherit;
+
+}
+.subtitle-features{
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+    margin-bottom: 7%;
+    
+}
+.paragraph-features{
+    width: 30%;
+    margin-left: 15%;
+    margin-top: 5%;
+    font-size: 18px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+}
+.chasis-features{
+    width: 55%;
+    text-align: center;
+}
+.contenedor1-style{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5%;
+}
+.contenedor2-style{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5%;
+}
+.motor-features{
+    width: 46%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.paragraph2-features{
+    width: 30%;
+    margin-top: 25%;
+    font-size: 18px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+}
+.subtitle2-features{
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+    margin-bottom: 7%;
+}
+.contenedor3-style{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.camioneta-features{
+    margin-left: 2%;
+    width: 50%;
+    text-align: center;
+    
+}
+.interior-features{
+    width: 46%;
+    margin-left: 15%;
+}
+.subtitle3-features{
+    
+    font-size: 25px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+    margin-bottom: 7%;
+    
+}
+.paragraph3-features{
+    width: 30%;
+    margin-top: 15%;
+    font-size: 18px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+}
+
+.paragraph4-features{
+    width: 30%;
+    margin-left: 15%;
+    margin-top: 20%;
+    font-size: 18px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+}
+.subtitle-features{
+    margin-top: 2%;
+    font-size: 25px;
+    font-weight: 220;
+    text-align: left;
+    font-family: inherit;
+    margin-bottom: 7%;
+}
+
+.style-grid{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 8%;
+}
+.garantia-style{
+    width: 350px;
+    height: 138px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+.garantia-text{
+    font-size: 14px;
+    font-weight: 420;
+    text-align: center;
+    font-family: inherit;
+    color: rgb(185, 182, 182);
+}
+.boton-style{
+    margin-top: 3%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+}
+.div-boton{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.linea{
+    color: gray;
+    margin-bottom: 3%;
+    margin-left: 12%;
+    margin-right: 8%;
+}
+.derechos{
+    margin-left: 12%;
+    font-size: 14px;
+    font-weight: 450;
+    text-align: left;
+    font-family: inherit;
+    color: gray;
+    margin-bottom: 3%;
+}

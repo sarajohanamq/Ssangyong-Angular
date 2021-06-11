@@ -10,6 +10,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -23,7 +25,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatProgressBarModule,
     MatSnackBarModule,
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule,
   ], exports:[
     MatAutocompleteModule,
     MatInputModule,
@@ -34,7 +37,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatProgressBarModule,
     MatSnackBarModule,
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule,
   ]
 })
 export class MaterialModule { }
