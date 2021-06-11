@@ -221,6 +221,11 @@ Estilos del contenedor del formulario
     flex-direction: row;
     width: 100%;
 }
+.contenedor4-style{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 .camioneta-features{
     margin-left: 2%;
     width: 50%;
@@ -328,4 +333,60 @@ Estilos del contenedor del formulario
     .contenedor-form{
         overflow: hidden;
     }
+}
+@media screen and (max-width:781px){
+    .image-korando{
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        text-align: center;
+    }
+    .contenedor1-style{ 
+        text-align: center;
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+    }
+    .contenedor2-style{
+        text-align: center;
+        justify-content: center;
+        flex-flow: column-reverse;
+        align-items: center;
+    } 
+    .contenedor3-style{
+        text-align: center;
+        justify-content: center;
+        flex-flow: column;
+        align-items: center;
+    }
+    .contenedor4-style{
+        text-align: center;
+        justify-content: center;
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+    .paragraph-features,.paragraph3-features,.paragraph4-features{
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .subtitle-features, .subtitle3-features{
+        text-align: center;
+    }
+    .paragraph2-features{
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .interior-features,.camioneta-features,.motor-features{
+        margin-left: 0;
+    }
+    .garantia-style{
+       width: 100%;
+    }
+    .imagen-garantia{
+        width: 100%;
+    }
+ 
 }
